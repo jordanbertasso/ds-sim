@@ -10,5 +10,5 @@ RUN make all
 
 EXPOSE 50000
 
-CMD ./ds-server
+CMD ["./ds-server"]
 

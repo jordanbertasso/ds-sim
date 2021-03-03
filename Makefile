@@ -9,7 +9,7 @@ stop:
 run:
 	$(MAKE) stop; \
 	$(MAKE) build; \
-	docker run --name ds-server -d -p 50000:50000 ds-server
+	docker run --init --name ds-server -d -p 50000:50000 ds-server
 
 logs:
 	docker logs -f ds-server
