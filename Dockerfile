@@ -1,6 +1,11 @@
-FROM alpine:3.13.2
+FROM ubuntu:20.04
 
-RUN apk add git vim make gcc libc-dev libxml2-dev
+ARG TZ=Australia/Sydney
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update
+
+RUN apt-get install -y git vim make gcc libc-dev libxml2-dev
 
 RUN git clone https://github.com/distsys-MQ/ds-sim
 
