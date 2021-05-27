@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 
-RUN apt-get install -y git vim make gcc libc-dev libxml2-dev
+RUN apt-get install -y git vim make gcc libc-dev libxml2-dev openjdk-16-jdk openjdk-16-jre
 
 RUN git clone https://github.com/distsys-MQ/ds-sim
 
